@@ -1,23 +1,19 @@
-h1 { text-align: center;
-    color:white;
-    font-size: 500%;
-    font-family: sans-serif;
-    font-weight: bold;
-    letter-spacing: -10px;
-}
-h2 { color: brown;
-}
-    body
-    {
-        font-family: sans-serif;
-        background-image: url(../Aufgabe3/bg.png);
-        width: 800px;
-        align-items: center;
-        overflow-y: scroll;
 
-    }
-    p { text-align: left;
-}
+h2 {
+    font-family: sans-serif;
+    color: #B63514;
+
+}   
+body
+{
+    font-family: sans-serif;
+    background-image: url("../Aufgabe3/bg.png");
+    width: 800px;
+    height: 800px;
+ top: 800px;
+ left: 800px;
+    overflow-y: scroll;
+}   
 
 #Sticky-Navigation
 ul {
@@ -25,11 +21,11 @@ ul {
         margin: 0%;
         padding: 0%;
         left: 800px;
-        position: fixed;
+        position: absolute;
         background-color: black;
         text-align: center;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 16px;
          display: block;
          color: white;
          padding: 08px 10px;
@@ -43,29 +39,33 @@ li a:hover {
   }
   li a { display: block;
     text-align: center; 
- color: white ;
+ color:white;
  padding: 08px 10px; 
  text-decoration: none;
   }
 
-#circle {
-    width: 600px;
-    height: 300px;
-    background-color:brown;
-    top: 800px;
-    margin-right: 520px;
-    margin-right: auto;
-    margin-top: auto;
-    border-bottom-left-radius: 310px; 
-    border-bottom-right-radius: 310px; 
-    border: 10px solid brown;
-    text-align: center;
-    border-top: 0;
-    color:transparent;
+  #Kreis
+  {
+  background-color: #B63514;
+  width: 600;
+  height: 300;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -15px;
+  margin-right: 520px;
+  margin-right: auto;
+  margin-top: auto;
+  border-bottom-left-radius: 310px; 
+  border-bottom-right-radius: 310px; 
+  border: 10px solid #B63514;
+  border-top: 0;
   }
-
-#Werken
-{
-   
-}
-
+  #Text-im-Kreis {
+      background-clip: url("../Aufgabe3/bg.png");
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: right;
+      font-size: 17%;
+    }
+  
