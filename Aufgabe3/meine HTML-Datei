@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8"> 
+    <title> Mein Portfolio</title>
+
+</head>
+
+<body>
+style= "background-color:SlateBlue;"
+    <h2>Bilder</h2>
+ <a herf="foto1_big.jpg"><img src="../Aufgabe-1/foto1_big.jpg"></a>
+
+ <img src="../Aufgabe-1/foto1.jpg"/>
+ <img src="../Aufgabe-1/foto2.jpg"/>
+ <img src="../Aufgabe-1/foto3.jpg"/>
+ <img src="../Aufgabe-1/foto4.jpg"/>
+ 
+<h2>Videos</h2>
+ <video src="../Aufgabe-1/clip1.mp4"></video>
+<video src="../Aufgabe-1/clip2.mp4"></video>
+<video src="../Aufgabe-1/clip3.mp4"></video>
+<video src="../Aufgabe-1/clip4.mp4"></video>
+<video src="../Aufgabe-1/L01_task_material_animation_clip1.ogg"></video>
+<video src="../Aufgabe-1/L01_task_material_animation_clip2.ogg>"></video>
+<video src="../Aufgabe-1/L01_task_material_animation_clip3.ogg"></video>
+<video src="../Aufgabe-1/L01_task_material_animation_clip4.ogg"></video>
+</body>

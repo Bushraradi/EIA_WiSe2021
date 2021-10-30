@@ -1,4 +1,10 @@
-
+h1 {font-family: sans-serif;
+    text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -5px;
+  
+} 
 h2 {
     font-family: sans-serif;
     color: #B63514;
@@ -15,13 +21,18 @@ body
     overflow-y: scroll;
 }   
 
-#Sticky-Navigation
+
+.Sticky-Navigation
+{
+    z-index: 2;
+}
 ul {
         list-style-type: none;
         margin: 0%;
         padding: 0%;
+        top: 0%;
         left: 800px;
-        position: absolute;
+        position: fixed;
         background-color: black;
         text-align: center;
         text-decoration: none;
@@ -29,6 +40,9 @@ ul {
          display: block;
          color: white;
          padding: 08px 10px;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
         }
 li  {
     float:right
@@ -44,28 +58,33 @@ li a:hover {
  text-decoration: none;
   }
 
-  #Kreis
+  .halbKreis
   {
   background-color: #B63514;
-  width: 600;
-  height: 300;
-  text-align: center;
-  font-size: 60px;
-  font-weight: bold;
-  letter-spacing: -15px;
-  margin-right: 520px;
+  width: 800px;
+  height: 400px;
+  top: 0%;
+  align-items: center;
   margin-right: auto;
-  margin-top: auto;
-  border-bottom-left-radius: 310px; 
-  border-bottom-right-radius: 310px; 
+  margin-left: auto;
+  border-bottom-left-radius: 410px; 
+  border-bottom-right-radius: 410px; 
   border: 10px solid #B63514;
   border-top: 0;
+  z-index: 1;
   }
-  #Text-im-Kreis {
+
+  
+
+
+  .Text-im-Kreis {
       background-clip: url("../Aufgabe3/bg.png");
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-align: right;
+      text-align: left;
+      width: 30%;
+      margin-left: auto;
+      padding-right: 550px;
       font-size: 17%;
     }
   
