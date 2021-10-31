@@ -73,16 +73,18 @@ li a:hover {
   }
   .titel
   {
-      top: 0pt;
+    top: 0pt;
+    position: absolute;
     font-family: sans-serif;
     text-align: center;
   font-size: 140px;
   font-weight: bold;
+  z-index: 3;
   letter-spacing: -15px; 
   }
 
-.Text-im-Kreis {
-    z-index: 2;
+.Text{
+    z-index: 4;
     text-align: right;
     width: 30%;
     float: left;
