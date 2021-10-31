@@ -75,6 +75,8 @@ li a:hover {
   .titel
   {
     top: 0pt;
+    padding-top: 0px;
+    color: honeydew;
     position: absolute;
     font-family: sans-serif;
     text-align: center;
@@ -87,16 +89,12 @@ li a:hover {
 
 .Text{
     z-index: 4;
-    text-align: right;
+    color: honeydew;
     width: 30%;
-    float: left;
-    padding-left: 550px;
+    float: right;
     font-family: sans-serif;
 }
 
-.Webformular
-{ 
-}
 a .facebook { 
     width: 30px;
     display: block;
