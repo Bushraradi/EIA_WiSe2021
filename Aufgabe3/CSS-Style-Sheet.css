@@ -1,18 +1,13 @@
 h1 {font-family: sans-serif;
     text-align: center;
-  font-size: 140px;
+  font-size: 190px;
   font-weight: bold;
-  letter-spacing: -15px;
-  
+  letter-spacing: -15px; 
 } 
 h2 {
     font-family: sans-serif;
     color: #B63514;
-
 }  
-h3 {
-    font-family: sans-serif;
-} 
 body
 {
     font-family: sans-serif;
@@ -83,15 +78,18 @@ li a:hover {
     text-align: center;
   font-size: 140px;
   font-weight: bold;
-  letter-spacing: -15px;
-    
+  letter-spacing: -15px; 
   }
 
-.Text-im-Kreis p {
+.Text-im-Kreis {
     z-index: 2;
     text-align: right;
     width: 30%;
     float: left;
-    padding-left: 350px;
+    padding-left: 550px;
     font-family: sans-serif;
+}
+
+.Webformular
+{ 
 }
