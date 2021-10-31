@@ -1,15 +1,19 @@
 h1 {font-family: sans-serif;
     text-align: center;
-  font-size: 60px;
+  font-size: 100px;
   font-weight: bold;
-  letter-spacing: -5px;
+  letter-spacing: -10px;
   
 } 
 h2 {
     font-family: sans-serif;
     color: #B63514;
 
-}   
+}  
+h3 {
+    font-size: 50px; 
+    font-family: sans-serif;
+} 
 body
 {
     font-family: sans-serif;
@@ -60,31 +64,30 @@ li a:hover {
 
   .halbKreis
   {
-  background-color: #B63514;
-  width: 800px;
-  height: 400px;
-  top: 0%;
-  align-items: center;
-  margin-right: auto;
-  margin-left: auto;
-  border-bottom-left-radius: 410px; 
-  border-bottom-right-radius: 410px; 
-  border: 10px solid #B63514;
-  border-top: 0;
-  z-index: 1;
+    z-index: 1;
+      top: 0%;
+      background-color: #B63514;
+      width: 800px;
+      height: 400px;
+      align-items: center;
+      margin-right: auto;
+      margin-left: auto;
+      border-bottom-left-radius: 410px; 
+      border-bottom-right-radius: 410px; 
+      border: 10px solid #B63514;
+      border-top: 0;
   }
 
-  
+
 
 
   .Text-im-Kreis {
-      background-clip: url("../Aufgabe3/bg.png");
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-align: left;
+      z-index: 3;
+      font-family: sans-serif;
+      text-align: right;
       width: 30%;
-      margin-left: auto;
-      padding-right: 550px;
-      font-size: 17%;
+      float: left;
+      padding-left: 350px;
+      font-size: 60%;
     }
   
