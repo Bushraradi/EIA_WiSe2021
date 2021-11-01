@@ -8,19 +8,33 @@ h1
   font-weight: bold;
   letter-spacing: -15px; 
   display: block;
-  padding-top: 5px;
+  padding: 100px 0px 0px 0px;
   color: honeydew;
   margin: 0px 0px 0px -10px; 
   line-height: 20px;
-  z-index: 3;
-} 
+  z-index: 3;} 
 
 h2 {
+    font-family: sans-serif;
+    color: honeydew;
+    font-size: 60px;
+    text-align: center;
+    margin: 65px 0px 0px 250px;
+    display: block;
+}  
+h3 {
     font-family: sans-serif;
     color: #B63514;
     display: block;
 }  
-
+p {
+    font-family: sans-serif;
+    color: honeydew;
+    display: block;
+    font-size: 15px;
+    text-align: left;
+    margin: 0px 60px 0px 310px;
+}  
 
 body
 {
@@ -32,7 +46,22 @@ body
  left: 800px;
     overflow-y: scroll;
 }  
+input {
+    color: white;
+border: white;
+background-color: gray;
+}
+form{
+    display: block;
+    border: 0px;
 
+}
+
+.Seite-1
+{
+    color: :red;
+
+}
 
 .Sticky-Navigation
 {
@@ -88,15 +117,6 @@ li a:hover {
       display: block;
   }
 
-  
-h3.Text{
-    z-index: 4;
-    color: honeydew;
-    width: 30%;
-    float: right;
-    font-family: sans-serif;
-    display: block;
-}
 
 a.facebook { 
     width: 30px;
@@ -109,4 +129,9 @@ a.facebook {
 { 
     color: gray;
     font-size: small;
+}
+p.Datenschutz
+{
+text-align: left;
+
 }
