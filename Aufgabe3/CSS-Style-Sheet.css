@@ -1,13 +1,27 @@
-h1 {font-family: sans-serif;
+h1
+  {
+    font-family: sans-serif;
     text-align: center;
+    top: 0%;
+    padding-top: 0%;
   font-size: 190px;
   font-weight: bold;
   letter-spacing: -15px; 
+  display: block;
+  padding-top: 5px;
+  color: honeydew;
+  margin: 0px 0px 0px -10px; 
+  line-height: 20px;
+  z-index: 3;
 } 
+
 h2 {
     font-family: sans-serif;
     color: #B63514;
+    display: block;
 }  
+
+
 body
 {
     font-family: sans-serif;
@@ -58,7 +72,7 @@ li a:hover {
 
   .halbKreis
   {
-    z-index: 1;
+      z-index: 1;
       top: 0%;
       margin-top: -10px;
       background-color: #B63514;
@@ -67,35 +81,24 @@ li a:hover {
       align-items: center;
       margin-right: auto;
       margin-left: auto;
-      border-bottom-left-radius: 410px; 
-      border-bottom-right-radius: 410px; 
+      border-bottom-left-radius: 510px; 
+      border-bottom-right-radius: 510px; 
       border: 10px solid #B63514;
       border-top: 0;
-  }
-  .titel
-  {
-    top: 0pt;
-    padding-top: 0px;
-    color: honeydew;
-    position: absolute;
-    font-family: sans-serif;
-    text-align: center;
-  font-size: 140px;
-  font-weight: bold;
-  z-index: 3;
-  letter-spacing: -15px; 
-  
+      display: block;
   }
 
-.Text{
+  
+h3.Text{
     z-index: 4;
     color: honeydew;
     width: 30%;
     float: right;
     font-family: sans-serif;
+    display: block;
 }
 
-a .facebook { 
+a.facebook { 
     width: 30px;
     display: block;
     margin-left: auto;
