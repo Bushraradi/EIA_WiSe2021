@@ -1,0 +1,32 @@
+body {
+    background-image: url(../Station-1/bg.png);
+    display: block;
+    margin: 8px;
+
+}
+header {
+    position:absolute;
+}
+.card {
+    position: absolute;
+    left: 200px;
+    top: 100px ;
+
+}
+.Pinguin {
+    position:absolute;
+    left: 500px ;
+    top: 200px ;
+}
+.Deko {
+    position:absolute;
+    top: -70px;
+    left: -60px;
+}
+.Text {
+    position:absolute;
+    color:antiquewhite;
+    z-index: 2;
+    top: 60px;
+    left: 100px;
+}
