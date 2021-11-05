@@ -1,0 +1,36 @@
+body {
+    background-image: url(../Station-5/bg.png);
+    display: block;
+    margin: 8px;
+}
+form {
+   color: antiquewhite;
+   border: none;
+}
+fieldset {
+  display: block; 
+}
+h1 {
+    color: antiquewhite;
+    display: block;
+}
+
+.Formular {
+ position: absolute;
+    display: block;
+    top: 30px;
+    left:30px;
+   
+}
+
+.card {
+    position: absolute;
+    left: 200px;
+    top: 100px ;
+
+}
+.ja-nein
+ {
+   color: antiquewhite;
+   border: none;
+}
