@@ -20,14 +20,12 @@ h1 {
     display: block;
     top: 30px;
     left:30px;
-   
 }
 
 .card {
     position: absolute;
     left: 200px;
     top: 100px ;
-
 }
 .ja-nein
  {
