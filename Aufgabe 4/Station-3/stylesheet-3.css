@@ -20,23 +20,79 @@ body {
 .Stern1 {
     position: absolute;
     left: 150px;
-    bottom: 80px;
+    bottom: 100px;
 }
+.Stern1:hover {
+    opacity: 0;
+}
+
+.Stern-1 {
+    position: absolute;
+    left: 150px;
+    bottom: 100px;
+    opacity: 0;
+}
+.Stern-1:hover {
+    opacity: 100;
+}
+
+
 
 .Stern2 {
     position: absolute;
     left: 250px;
     bottom: 200px;
 }
+.Stern2:hover {
+    opacity: 0;
+}
+
+.Stern-2 {
+    position: absolute;
+    left: 250px;
+    bottom: 200px;
+    opacity: 0;
+}
+.Stern-2:hover {
+    opacity: 100;
+}
+
 
 .Stern3 {
     position: absolute;
     left: 350px;
-    bottom: 80px;
+    bottom: 100px;
 }
+
+.Stern3:hover {
+    opacity: 0;
+}
+
+.Stern-3 {
+    position: absolute;
+    left: 350px;
+    bottom: 100px;
+    opacity: 0;
+}
+.Stern-3:hover {
+    opacity: 100;
+}
+
 
 .Stern4  {
     position: absolute;
     left: 450px;
-    bottom: 200px
+    bottom: 200px;
+}
+.Stern4:hover  {
+    opacity: 0;
+}
+.Stern-4 {
+    position: absolute;
+    left: 450px;
+    bottom: 200px;
+    opacity: 0;
+}
+.Stern-4:hover {
+    opacity: 100;
 }
