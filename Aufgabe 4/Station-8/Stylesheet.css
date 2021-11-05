@@ -1,0 +1,35 @@
+body {
+    background-image: url(../Station-8/bg.png);
+    display: block;
+    margin: 8px;
+}
+iframe {
+    width: 520px;
+    height: 295px;
+    display: block;
+    margin: 8px;
+
+}
+.card {
+    position: absolute;
+    left: 200px;
+    top: 100px ;
+
+}
+
+.Youtube-video {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    display: block;
+}
+
+.Banderole {
+    position:relative;
+    top:  -5px;
+    left: -235px;
+}
+
+ {
+   
+}
