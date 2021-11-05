@@ -14,7 +14,10 @@ h1 {
     color: antiquewhite;
     display: block;
 }
-
+p {
+    color: antiquewhite;
+    font-weight: bold;
+}
 .Formular {
  position: absolute;
     display: block;
@@ -31,4 +34,6 @@ h1 {
  {
    color: antiquewhite;
    border: none;
+   position: relative;
+   left: -10px;
 }
