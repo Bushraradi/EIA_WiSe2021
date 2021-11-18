@@ -74,6 +74,7 @@ var L06;
             document.getElementById("growth").innerHTML = afR.toFixed(1);
             document.getElementById("absolutegrowth").innerHTML = afr.toFixed(1);
         }
+        document.querySelector(".africa").addEventListener("click", Africa);
         /*Südamerika*/
         function Suedamerika() {
             document.getElementById("titleRegion").innerHTML = "South America";
@@ -83,6 +84,7 @@ var L06;
             document.getElementById("growth").innerHTML = sA.toFixed(1);
             document.getElementById("absolutegrowth").innerHTML = Sa.toFixed(1);
         }
+        document.querySelector(".southamerica").addEventListener("click", Suedamerika);
         /*Europa*/
         function Europa() {
             document.getElementById("titleRegion").innerHTML = "Europe";
@@ -92,6 +94,7 @@ var L06;
             document.getElementById("growth").innerHTML = Eu.toFixed(1);
             document.getElementById("absolutegrowth").innerHTML = eU.toFixed(1);
         }
+        document.querySelector(".europe").addEventListener("click", Europa);
         /*Nordamerika*/
         function Nordamerika() {
             document.getElementById("titleRegion").innerHTML = "NorthAmerica";
@@ -120,12 +123,9 @@ var L06;
             document.getElementById("absolutegrowth").innerHTML = Au.toFixed(1);
         }
         /*Klick*/
-        document.getElementById(".africa").addEventListener("click", Africa);
-        document.getElementById(".southamerica").addEventListener("click", Suedamerika);
-        document.getElementById(".europe").addEventListener("click", Europa);
-        document.getElementById(".nouthamerica").addEventListener("click", Nordamerika);
-        document.getElementById(".asia").addEventListener("click", Asien);
-        document.getElementById(".australia").addEventListener("click", Australien);
+        document.querySelector(".nouthamerica").addEventListener("click", Nordamerika);
+        document.querySelector(".asia").addEventListener("click", Asien);
+        document.querySelector(".australia").addEventListener("click", Australien);
     });
 })(L06 || (L06 = {}));
 ;

@@ -112,7 +112,9 @@ function Africa (): void {
     document.getElementById("worldemission").innerHTML=aFR.toFixed(1);
     document.getElementById("growth").innerHTML= afR.toFixed(1);
     document.getElementById("absolutegrowth").innerHTML=afr.toFixed(1);
+    
 }
+document.querySelector(".africa").addEventListener("click" , Africa);
 
 /*Südamerika*/
 function Suedamerika (): void {
@@ -123,7 +125,7 @@ function Suedamerika (): void {
     document.getElementById("growth").innerHTML=sA.toFixed(1);
     document.getElementById("absolutegrowth").innerHTML=Sa.toFixed(1);
 }
-
+document.querySelector(".southamerica").addEventListener("click" , Suedamerika);
 
 /*Europa*/
     function Europa () {
@@ -134,7 +136,8 @@ function Suedamerika (): void {
     document.getElementById("growth").innerHTML=Eu.toFixed(1);
     document.getElementById("absolutegrowth").innerHTML=eU.toFixed(1);
 }
-    
+document.querySelector(".europe").addEventListener("click" , Europa);   
+
 /*Nordamerika*/
 function Nordamerika () {
     document.getElementById("titleRegion").innerHTML="NorthAmerica";
@@ -167,12 +170,9 @@ function Australien () {
 }
 
 /*Klick*/
-document.getElementById(".africa").addEventListener("click" , Africa);
-document.getElementById(".southamerica").addEventListener("click" , Suedamerika );
-document.getElementById(".europe").addEventListener("click" , Europa);
-document.getElementById(".nouthamerica").addEventListener("click" , Nordamerika );
-document.getElementById(".asia").addEventListener("click" , Asien);
-document.getElementById(".australia").addEventListener("click" , Australien);
+document.querySelector(".nouthamerica").addEventListener("click" , Nordamerika);
+document.querySelector(".asia").addEventListener("click" , Asien);
+document.querySelector(".australia").addEventListener("click" , Australien);
 
 
 })};
