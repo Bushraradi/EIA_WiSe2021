@@ -169,7 +169,5 @@ function Australien () {
     document.getElementById("growth").innerHTML=aU.toFixed(1);
     document.getElementById("absolutegrowth").innerHTML=Au.toFixed(1);
 }
-
-/*Klick*/
 document.querySelector(".australia").addEventListener("click" , Australien);
 })};

@@ -124,7 +124,6 @@ var L06;
             document.getElementById("growth").innerHTML = aU.toFixed(1);
             document.getElementById("absolutegrowth").innerHTML = Au.toFixed(1);
         }
-        /*Klick*/
         document.querySelector(".australia").addEventListener("click", Australien);
     });
 })(L06 || (L06 = {}));
