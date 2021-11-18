@@ -11,7 +11,13 @@ html, body {
 nav {
     margin-bottom: 60px;
 }
+img {
+    opacity: 50%;
+}
 
+img:hover {
+    opacity: 100%;;
+}
 section {
     display: inline-block;
     margin: 20px;
