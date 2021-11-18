@@ -98,71 +98,72 @@ console.log('Die Emission von Australien ist: '  + obj6 + 'kg CO2. Relativ zur G
 console.log('Für Australien hat sich 2018 im Vergleich zu 2008 die Emission um '  + aU + '% verändert. ')
 console.log('im Vergleich zu 2008 sind das ' + Au + 'kg CO2')
 
+
 /*Aufgabe 06*/
 
-window.addEventListener("load", function() { });
+window.addEventListener("load", function () { 
 
 
 /*Afrika*/
 function Africa (): void {
     document.getElementById("titleRegion").innerHTML="Africa";
-    document.getElementById("emission08").innerHTML=obj1;
+    document.getElementById("emission08").innerHTML=obj1.toFixed(1);
     document.getElementById("kontinent").innerHTML="Africa";
-    document.getElementById("worldemission").innerHTML=aFR;
-    document.getElementById("growth").innerHTML= afR;
-    document.getElementById("absolutegrowth").innerHTML=afr;
+    document.getElementById("worldemission").innerHTML=aFR.toFixed(1);
+    document.getElementById("growth").innerHTML= afR.toFixed(1);
+    document.getElementById("absolutegrowth").innerHTML=afr.toFixed(1);
 }
 
 /*Südamerika*/
-function Suedamerika () {
+function Suedamerika (): void {
     document.getElementById("titleRegion").innerHTML="South America";
-    document.getElementById("emission08").innerHTML=obj2;
+    document.getElementById("emission08").innerHTML=obj2.toFixed(1);
     document.getElementById("kontinent").innerHTML="South America";
-    document.getElementById("worldemission").innerHTML=SA;
-    document.getElementById("growth").innerHTML=sA;
-    document.getElementById("absolutegrowth").innerHTML=Sa;
+    document.getElementById("worldemission").innerHTML=SA.toFixed(1);
+    document.getElementById("growth").innerHTML=sA.toFixed(1);
+    document.getElementById("absolutegrowth").innerHTML=Sa.toFixed(1);
 }
 
 
 /*Europa*/
     function Europa () {
     document.getElementById("titleRegion").innerHTML="Europe";
-    document.getElementById("emission08").innerHTML=obj3;
+    document.getElementById("emission08").innerHTML=obj3.toFixed(1);
     document.getElementById("kontinent").innerHTML="Europe";
-    document.getElementById("worldemission").innerHTML=EU;
-    document.getElementById("growth").innerHTML=Eu;
-    document.getElementById("absolutegrowth").innerHTML=eU;
+    document.getElementById("worldemission").innerHTML=EU.toFixed(1);
+    document.getElementById("growth").innerHTML=Eu.toFixed(1);
+    document.getElementById("absolutegrowth").innerHTML=eU.toFixed(1);
 }
     
 /*Nordamerika*/
 function Nordamerika () {
     document.getElementById("titleRegion").innerHTML="NorthAmerica";
-    document.getElementById("emission08").innerHTML=obj4;
+    document.getElementById("emission08").innerHTML=obj4.toFixed(1);
     document.getElementById("kontinent").innerHTML="North America";
-    document.getElementById("worldemission").innerHTML=NA;
-    document.getElementById("growth").innerHTML=Na;
-    document.getElementById("absolutegrowth").innerHTML=na;
+    document.getElementById("worldemission").innerHTML=NA.toFixed(1);
+    document.getElementById("growth").innerHTML=Na.toFixed(1);
+    document.getElementById("absolutegrowth").innerHTML=na.toFixed(1);
 }
 
 
 /*Asien*/
 function Asien () {
     document.getElementById("titleRegion").innerHTML="Asia";
-    document.getElementById("emission08").innerHTML=obj5;
+    document.getElementById("emission08").innerHTML=obj5.toFixed(1);
     document.getElementById("kontinent").innerHTML="Asia";
-    document.getElementById("worldemission").innerHTML=AS;
-    document.getElementById("growth").innerHTML=aS;
-    document.getElementById("absolutegrowth").innerHTML=As;
+    document.getElementById("worldemission").innerHTML=AS.toFixed(1);
+    document.getElementById("growth").innerHTML=aS.toFixed(1);
+    document.getElementById("absolutegrowth").innerHTML=As.toFixed(1);
 }
 
 /*Austarlien*/
 function Australien () {
     document.getElementById("titleRegion").innerHTML="Australia";
-    document.getElementById("emission08").innerHTML=obj6;
+    document.getElementById("emission08").innerHTML=obj6.toFixed(1);
     document.getElementById("kontinent").innerHTML="Australia";
-    document.getElementById("worldemission").innerHTML=AU;
-    document.getElementById("growth").innerHTML=aU;
-    document.getElementById("absolutegrowth").innerHTML=Au;
+    document.getElementById("worldemission").innerHTML=AU.toFixed(1);
+    document.getElementById("growth").innerHTML=aU.toFixed(1);
+    document.getElementById("absolutegrowth").innerHTML=Au.toFixed(1);
 }
 
 /*Klick*/
@@ -174,4 +175,4 @@ document.getElementById(".asia").addEventListener("click" , Asien);
 document.getElementById(".australia").addEventListener("click" , Australien);
 
 
-}
+})};
