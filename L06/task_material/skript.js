@@ -104,6 +104,7 @@ var L06;
             document.getElementById("growth").innerHTML = Na.toFixed(1);
             document.getElementById("absolutegrowth").innerHTML = na.toFixed(1);
         }
+        document.querySelector(".northamerica").addEventListener("click", Nordamerika);
         /*Asien*/
         function Asien() {
             document.getElementById("titleRegion").innerHTML = "Asia";
@@ -113,6 +114,7 @@ var L06;
             document.getElementById("growth").innerHTML = aS.toFixed(1);
             document.getElementById("absolutegrowth").innerHTML = As.toFixed(1);
         }
+        document.querySelector(".asia").addEventListener("click", Asien);
         /*Austarlien*/
         function Australien() {
             document.getElementById("titleRegion").innerHTML = "Australia";
@@ -123,8 +125,6 @@ var L06;
             document.getElementById("absolutegrowth").innerHTML = Au.toFixed(1);
         }
         /*Klick*/
-        document.querySelector(".nouthamerica").addEventListener("click", Nordamerika);
-        document.querySelector(".asia").addEventListener("click", Asien);
         document.querySelector(".australia").addEventListener("click", Australien);
     });
 })(L06 || (L06 = {}));
