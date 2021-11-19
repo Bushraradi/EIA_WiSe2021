@@ -74,6 +74,7 @@ var L06;
             document.getElementById("growth").innerHTML = afR.toFixed(1);
             document.getElementById("absolutegrowth").innerHTML = afr.toFixed(1);
         }
+        /*Klick*/
         document.querySelector(".africa").addEventListener("click", Africa);
         /*Südamerika*/
         function Suedamerika() {

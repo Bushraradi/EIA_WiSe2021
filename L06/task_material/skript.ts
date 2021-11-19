@@ -114,6 +114,7 @@ function Africa (): void {
     document.getElementById("absolutegrowth").innerHTML=afr.toFixed(1);
     
 }
+/*Klick*/
 document.querySelector(".africa").addEventListener("click" , Africa);
 
 /*Südamerika*/
