@@ -46,7 +46,7 @@ function Kontinente (country:string, country08, country18) {
     document.getElementById("worldemission").innerHTML= Math.round(100.0*((100/alles)*country08)) / 100.0+"%";
     document.getElementById("growth").innerHTML= Math.round(100*(((country18/country08)*100) - 100))/100+"%";
     document.getElementById("absolutegrowth").innerHTML= Math.round(country18 - country08).toFixed(1);
-    document.querySelector(".chatwrapper .chart").setAttribute("style", "height:"+(country18/alles*100));
+    document.getElementById("chart").setAttribute("style", "height:"+(country18/alles*100));
     
 }
 

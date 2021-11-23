@@ -31,7 +31,7 @@ section {
     height: 100px;
     background: rgba(255, 255, 255, 0.5);
 }
-.chartWrapper .chart {
+.chartWrapper #chart {
     position: absolute;
     bottom: 0;
     width: 100%;
