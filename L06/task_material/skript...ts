@@ -37,8 +37,6 @@ var alles : number = obj1 + obj2 + obj3 + obj4 + obj5 + obj6;
 
 /*Aufgabe 06*/
 
-window.addEventListener("load", function () { 
-
 
 /*Afrika*/
 function Kontinente (country:string, country08, country18) {
@@ -64,4 +62,4 @@ document.querySelector(".europe").addEventListener("click" , function(){Kontinen
 document.querySelector(".northamerica").addEventListener("click" , function(){Kontinente("Nordamrika",obj4_2008, obj4);}); 
 document.querySelector(".asia").addEventListener("click" , function(){Kontinente("Asien",obj5_2008, obj5);}); 
 document.querySelector(".australia").addEventListener("click" , function(){Kontinente("Australien",obj6_2008, obj6);}); 
-})}
+}
