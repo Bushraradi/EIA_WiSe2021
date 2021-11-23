@@ -50,11 +50,11 @@ function Kontinente (country:string, country08, country18) {
     document.querySelector(".chart").setAttribute("style", "height:"+(country18/alles*100));
     
 }
-Kontinente("Afrika", obj1_2008, obj1);
-Kontinente("Südamerika", obj2_2008, obj2);
-Kontinente("Europa", obj3_2008, obj3);
-Kontinente("Nordamrika", obj4_2008, obj4);
-Kontinente("Asien", obj5_2008, obj5);
+Kontinente("Afrika", obj1_2008, obj1)
+Kontinente("Südamerika", obj2_2008, obj2)
+Kontinente("Europa", obj3_2008, obj3)
+Kontinente("Nordamrika", obj4_2008, obj4)
+Kontinente("Asien", obj5_2008, obj5)
 Kontinente("Australien", obj6_2008, obj6);
 
 
