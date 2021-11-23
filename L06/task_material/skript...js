@@ -22,26 +22,22 @@ var L06;
     /*Gesamt*/
     var alles = obj1 + obj2 + obj3 + obj4 + obj5 + obj6;
     /*Aufgabe 06*/
-    /*Afrika*/
-    function Kontinente(country, country08, country18) {
-        document.getElementById("emission08").innerHTML = country18.toFixed(1);
-        document.querySelector(".kontinent").innerHTML = country;
-        document.getElementById("worldemission").innerHTML = Math.round(100.0 * ((100 / alles) * country08)) / 100.0 + "%";
-        document.getElementById("growth").innerHTML = Math.round(100 * (((country18 / country08) * 100) - 100)) / 100 + "%";
-        document.getElementById("absolutegrowth").innerHTML = Math.round(country18 - country08).toFixed(1);
-        document.querySelector(".chatwrapper .chart").setAttribute("style", "height:" + (country18 / alles * 100));
-    }
-    Kontinente("Afrika", obj1_2008, obj1);
-    Kontinente("Südamerika", obj2_2008, obj2);
-    Kontinente("Europa", obj3_2008, obj3);
-    Kontinente("Nordamrika", obj4_2008, obj4);
-    Kontinente("Asien", obj5_2008, obj5);
-    Kontinente("Australien", obj6_2008, obj6);
-    document.querySelector(".africa").addEventListener("click", function () { Kontinente("Afrika", obj1_2008, obj1); });
-    document.querySelector(".southamerica").addEventListener("click", function () { Kontinente("Südamerika", obj2_2008, obj2); });
-    document.querySelector(".europe").addEventListener("click", function () { Kontinente("Europa", obj3_2008, obj3); });
-    document.querySelector(".northamerica").addEventListener("click", function () { Kontinente("Nordamrika", obj4_2008, obj4); });
-    document.querySelector(".asia").addEventListener("click", function () { Kontinente("Asien", obj5_2008, obj5); });
-    document.querySelector(".australia").addEventListener("click", function () { Kontinente("Australien", obj6_2008, obj6); });
+    window.addEventListener("load", function () {
+        /*Afrika*/
+        function Kontinente(country, country08, country18) {
+            document.getElementById("emission08").innerHTML = country18.toFixed(1);
+            document.querySelector(".kontinent").innerHTML = country;
+            document.getElementById("worldemission").innerHTML = Math.round(100.0 * ((100 / alles) * country08)) / 100.0 + "%";
+            document.getElementById("growth").innerHTML = Math.round(100 * (((country18 / country08) * 100) - 100)) / 100 + "%";
+            document.getElementById("absolutegrowth").innerHTML = Math.round(country18 - country08).toFixed(1);
+            document.querySelector(".chatwrapper .chart").setAttribute("style", "height:" + (country18 / alles * 100));
+        }
+        document.querySelector(".africa").addEventListener("click", function () { Kontinente("Afrika", obj1_2008, obj1); });
+        document.querySelector(".southamerica").addEventListener("click", function () { Kontinente("Südamerika", obj2_2008, obj2); });
+        document.querySelector(".europe").addEventListener("click", function () { Kontinente("Europa", obj3_2008, obj3); });
+        document.querySelector(".northamerica").addEventListener("click", function () { Kontinente("Nordamrika", obj4_2008, obj4); });
+        document.querySelector(".asia").addEventListener("click", function () { Kontinente("Asien", obj5_2008, obj5); });
+        document.querySelector(".australia").addEventListener("click", function () { Kontinente("Australien", obj6_2008, obj6); });
+    });
 })(L06 || (L06 = {}));
 //# sourceMappingURL=skript...js.map

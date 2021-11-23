@@ -37,6 +37,7 @@ var alles : number = obj1 + obj2 + obj3 + obj4 + obj5 + obj6;
 
 /*Aufgabe 06*/
 
+window.addEventListener("load", function () { 
 
 /*Afrika*/
 function Kontinente (country:string, country08, country18) {
@@ -48,13 +49,6 @@ function Kontinente (country:string, country08, country18) {
     document.querySelector(".chatwrapper .chart").setAttribute("style", "height:"+(country18/alles*100));
     
 }
-Kontinente("Afrika", obj1_2008, obj1);
-Kontinente("Südamerika", obj2_2008, obj2);
-Kontinente("Europa", obj3_2008, obj3);
-Kontinente("Nordamrika", obj4_2008, obj4);
-Kontinente("Asien", obj5_2008, obj5);
-Kontinente("Australien", obj6_2008, obj6);
-
 
 document.querySelector(".africa").addEventListener("click" , function(){Kontinente("Afrika",obj1_2008, obj1);});
 document.querySelector(".southamerica").addEventListener("click" , function(){Kontinente("Südamerika",obj2_2008, obj2);});
@@ -62,4 +56,4 @@ document.querySelector(".europe").addEventListener("click" , function(){Kontinen
 document.querySelector(".northamerica").addEventListener("click" , function(){Kontinente("Nordamrika",obj4_2008, obj4);}); 
 document.querySelector(".asia").addEventListener("click" , function(){Kontinente("Asien",obj5_2008, obj5);}); 
 document.querySelector(".australia").addEventListener("click" , function(){Kontinente("Australien",obj6_2008, obj6);}); 
-}
+})}
