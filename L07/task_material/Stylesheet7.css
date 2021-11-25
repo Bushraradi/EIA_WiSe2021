@@ -1,0 +1,93 @@
+html, body {
+    background-color:#000;
+}
+
+div .drumPad {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button {
+    width: 150px;
+    height:150px;
+    border: 2px;
+   margin: 4px;
+   float: left;
+    border-radius: 12px;
+
+}
+
+.blue {
+    background-color: #3434e2 ;
+
+   
+}
+.pink {
+    background-color:#dd3f6f ;
+ 
+ 
+}
+.orange {
+    background-color:#ff8c00 ;
+  
+ 
+}
+.button9 {
+    position: absolute ;
+    top: 280px;
+    left: 50%;
+
+}
+/*
+#button0 {
+    width: 150px;
+    height:150px;
+    border: 2px;
+}
+#button1 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+}
+#button2 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+}
+#button3 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+}
+#button4 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+}
+#button5 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+}
+#button6 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+}
+#button7 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+}
+#button8 {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+} */
+.button9 {
+    position: absolute ;
+    top: 280px;
+    left: 50%;
+
+}
