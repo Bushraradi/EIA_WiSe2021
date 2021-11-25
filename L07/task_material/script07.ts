@@ -14,7 +14,7 @@ document.getElementById("button6").addEventListener("click", function(){(sound[6
 document.getElementById("button7").addEventListener("click", function(){(sound[7]).play()});
 document.getElementById("button8").addEventListener("click", function(){(sound[8]).play()});
 
-document.querySelector(".button9").addEventListener("click", function(){;
+document.querySelector(".button9").addEventListener("click", function(){
 
 setInterval(function(){ sound[4].play()
 },500)
