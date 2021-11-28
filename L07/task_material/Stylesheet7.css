@@ -2,10 +2,10 @@ html, body {
     background-color:#000;
 }
 .drumPad {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 480px;
 }
 button {
     width: 150px;
@@ -34,19 +34,21 @@ button:hover {
     width: 150px;
     height:150px;
     border: 2px;
-    margin-top: 600px;
-    left: 480px;
+  left:530px;
+    margin: 5px;
+    border-radius: 5px;  
 }
 .button9:hover {
     opacity: 80%;
 }
 .Flow-Chart {
 
-position: relative;
+position: absolute;
 font-family: sans-serif;
 color:#3434e2;
 font-size: 20px;
 text-decoration: none;
+top: 0%;
 }
 .Flow-Chart:hover {
     color: #ff8c00;
