@@ -15,6 +15,10 @@ button {
    float: left;
  border-radius: 12px;
 }
+button:hover {
+ opacity: 80%;
+}
+
 .blue {
     background-color: #3434e2 ;
 }
@@ -26,6 +30,24 @@ button {
 }
 .button9 {
     position: absolute;
-    top: 600px;
-    left: 43%;
+    display: inline-block;
+    width: 150px;
+    height:150px;
+    border: 2px;
+    margin-top: 600px;
+    left: 480px;
 }
+.button9:hover {
+    opacity: 80%;
+}
+.Flow-Chart {
+
+position: relative;
+font-family: sans-serif;
+color:#3434e2;
+font-size: 20px;
+text-decoration: none;
+}
+.Flow-Chart:hover {
+    color: #ff8c00;
+    }
