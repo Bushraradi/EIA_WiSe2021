@@ -1,0 +1,51 @@
+html, body {
+    background-color:#000;
+}
+.drumPad {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 480px;
+}
+button {
+    width: 150px;
+    height:150px;
+    border: 2px;
+   margin: 4px;
+   float: left;
+ border-radius: 12px;
+}
+button:hover {
+ opacity: 80%;
+}
+
+.blue {
+    background-color: #3434e2 ;
+}
+.pink {
+    background-color:#dd3f6f ;
+}
+.orange {
+    background-color:#ff8c00 ;
+}
+.myIcons{
+    display: flex;
+    width: 450px;
+}
+i{
+    font-size: 100px;
+    color: white;
+}
+
+i:hover{
+    opacity: 80%;
+}
+#play {
+    margin-left: 30px;
+    }
+#mix {
+margin-left: 50px;
+}
+#trash {
+ margin-left: 70px;
+}
