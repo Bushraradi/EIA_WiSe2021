@@ -13,8 +13,9 @@ var beat[] = [sound[4], sound[5], sound[8]];
 var index: number = 0;
 var theremix: number;
 
-function play(sound) {
- sound.play();
+function play(musik) {
+var SOUND = new Audio(musik);
+ SOUND.play();
     }
 
 document.getElementById("button0").addEventListener("click", function () { (sound [0]); });
