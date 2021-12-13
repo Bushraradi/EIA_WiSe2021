@@ -40,7 +40,6 @@ var L8;
             beat = [];
         }
         /*click on Play-Button to switch into Pause-Button*/
-        var btn = document.getElementById("play");
         function playBeat() {
             if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
                 document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
@@ -58,21 +57,9 @@ var L8;
             if (index > beat.length)
                 index = 0;
         }
-        /*Stoppt Beat*/
-        function stopBeat() {
-            playingNow = false;
-            if (btn.getAttribute("class"), "fas fa-stop-circle") {
-                btn.setAttribute("class", "far fa-play-circle");
-            }
-            document.querySelector("#play").addEventListener("click", function () { if (!playingNow) {
-                playbeat();
-            }
-            else {
-                stopBeat();
-            } });
-            document.querySelector("#mix").addEventListener("click", shuffle);
-            document.querySelector("#trash").addEventListener("click", clearBeat);
-        }
+        document.querySelector("#play").addEventListener("click", function () { playBeat(); });
+        document.querySelector("#mix").addEventListener("click", function () { shuffle(); });
+        document.querySelector("#trash").addEventListener("click", function () { clearBeat(); });
     });
 })(L8 || (L8 = {}));
 //# sourceMappingURL=script8.js.map

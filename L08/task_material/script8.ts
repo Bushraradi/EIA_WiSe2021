@@ -30,7 +30,7 @@ document.getElementById("button8").addEventListener("click", function () { (soun
 
     /*play the cantral function for the DrumPad*/
 
-function play(sound: string) {
+function play(sound) {
     // tslint:disable-next-line: typedef
     var audio = new Audio(sound);
     audio.play();
@@ -52,7 +52,6 @@ function clearBeat(): void {
 
 
 /*click on Play-Button to switch into Pause-Button*/
-var btn = document.getElementById("play");
     
 function playBeat() {
     if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
@@ -69,23 +68,14 @@ function mixbeat() {
     play(sound[index]);
     index++;
     if (index > beat.length)
-        index = 0;
-    }
-    /*Stoppt Beat*/
-function stopBeat() {
-        playingNow = false;
-        if (btn.getAttribute("class"), "fas fa-stop-circle") {
-            btn.setAttribute("class", "far fa-play-circle");
-        }
+        index = 0;}
 
-        document.querySelector("#play").addEventListener("click", function(): void {if (!playingNow) {playbeat(); } else {stopBeat(); }});
-        document.querySelector("#mix").addEventListener("click", shuffle);
-        document.querySelector("#trash").addEventListener("click", clearBeat);
+
+document.querySelector("#play").addEventListener("click", function () { playBeat(); });
+document.querySelector("#mix").addEventListener("click", function () { shuffle(); });
+document.querySelector("#trash").addEventListener("click", function () { clearBeat(); });
 
 } 
 
 
-
 }
-
-);}
