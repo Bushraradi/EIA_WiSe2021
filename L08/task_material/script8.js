@@ -1,15 +1,17 @@
 var L8;
 (function (L8) {
+    // tslint:disable-next-line: typedef
     window.addEventListener("load", function playSample() {
         /*Sounds*/
-        var sound = [new Audio("assets/A.mp3"),
+        var sound, _a = [new Audio("assets/A.mp3"),
             new Audio("assets/C.mp3"), new Audio("assets/F.mp3"),
             new Audio("assets/G.mp3"), new Audio("assets/hihat.mp3"),
             new Audio("assets/kick.mp3"), new Audio("assets/laugh-1.mp3"),
             new Audio("assets/laugh-2.mp3"), new Audio("assets/snare.mp3")];
-        var beat = [sound[4], sound[5], sound[8]];
+        var beat, _b = [sound[4], sound[5], sound[8]];
         var playingNow = false;
         var index = 0;
+        var theremix;
         /*Buttons and sound*/
         document.getElementById("button0").addEventListener("click", function () { (sound[0]); });
         document.getElementById("button1").addEventListener("click", function () { (sound[1]); });
@@ -20,18 +22,11 @@ var L8;
         document.getElementById("button6").addEventListener("click", function () { (sound[6]); });
         document.getElementById("button7").addEventListener("click", function () { (sound[7]); });
         document.getElementById("button8").addEventListener("click", function () { (sound[8]); });
-        document.querySelector("#play").addEventListener("click", function () {
-            if (!playingNow) {
-                playbeat();
-            }
-            else {
-                stopBeat();
-            }
-        });
         /*play the cantral function for the DrumPad*/
-        function play(sample) {
-            var song = new Audio(sample);
-            song.play();
+        function play(sound) {
+            // tslint:disable-next-line: typedef
+            var audio = new Audio(sound);
+            audio.play();
         }
         /*Beat*/
         function shuffle() {
@@ -46,27 +41,24 @@ var L8;
         }
         /*click on Play-Button to switch into Pause-Button*/
         var btn = document.getElementById("play");
-        function playbeat() {
-            playingNow = true;
-            var loop = setInterval(playPreset, 500);
-            function playPreset() {
-                if (!playingNow) {
-                    clearInterval(loop);
-                }
-                else if (index >= beat.length) {
-                    index = 0;
-                    play(beat[index]);
-                }
-                else {
-                    play(beat[index]);
-                }
-                index++;
+        function playBeat() {
+            if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
+                document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+                theremix = setInterval(mixbeat, 500);
             }
-            if (btn.getAttribute("class"), "far fa-play-circle") {
-                btn.setAttribute("class", "fas fa-stop-circle");
+            else {
+                document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+                document.getElementById("play").setAttribute("class", "fas fa-play-circle");
+                clearInterval(theremix);
             }
         }
-        //Stoppt Beat
+        function mixbeat() {
+            play(sound[index]);
+            index++;
+            if (index > beat.length)
+                index = 0;
+        }
+        /*Stoppt Beat*/
         function stopBeat() {
             playingNow = false;
             if (btn.getAttribute("class"), "fas fa-stop-circle") {

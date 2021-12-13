@@ -1,16 +1,18 @@
 
 namespace L8 {
+// tslint:disable-next-line: typedef
 window.addEventListener("load", function playSample() {
        /*Sounds*/
-var sound: HTMLAudioElement[] = [new Audio("assets/A.mp3"),
+const sound[] = [new Audio("assets/A.mp3"),
 new Audio("assets/C.mp3"), new Audio("assets/F.mp3"),
    new Audio("assets/G.mp3"), new Audio("assets/hihat.mp3"),
    new Audio("assets/kick.mp3"), new Audio("assets/laugh-1.mp3"),
    new Audio("assets/laugh-2.mp3"), new Audio("assets/snare.mp3")];
 
-var beat: HTMLAudioElement [] = [sound[4], sound[5], sound[8]];
+var beat[] = [sound[4], sound[5], sound[8]];
 var playingNow: boolean = false;
 var index: number = 0;
+var theremix: number;
 
  
 /*Buttons and sound*/ 
@@ -24,19 +26,14 @@ document.getElementById("button5").addEventListener("click", function () { (soun
 document.getElementById("button6").addEventListener("click", function () { (sound [6]); });
 document.getElementById("button7").addEventListener("click", function () { (sound [7]); });
 document.getElementById("button8").addEventListener("click", function () { (sound [8]); });
-document.querySelector("#play").addEventListener("click", function () { if (!playingNow) {
-    playbeat();
-}
-else {
-    stopBeat();
-} });
 
 
     /*play the cantral function for the DrumPad*/
 
-function play(sample) {
-    var song = new Audio(sample);
-    song.play();
+function play(sound: string) {
+    // tslint:disable-next-line: typedef
+    var audio = new Audio(sound);
+    audio.play();
     }
 
     /*Beat*/
@@ -54,32 +51,27 @@ function clearBeat(): void {
 
 
 
-
-
 /*click on Play-Button to switch into Pause-Button*/
 var btn = document.getElementById("play");
     
-function playbeat() {
-        playingNow = true;
-        var loop = setInterval(playPreset, 500);
-        function playPreset() {
-            if (!playingNow) {
-                clearInterval(loop);
-            }
-            else if (index >= beat.length) {
-                index = 0;
-                play(beat[index]);
-            }
-            else {
-                play(beat[index]);
-            }
-            index++;
-        }
-        if (btn.getAttribute("class"), "far fa-play-circle") {
-            btn.setAttribute("class", "fas fa-stop-circle");
-        }
+function playBeat() {
+    if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
+        document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+        theremix = setInterval(mixbeat, 500);
     }
-    //Stoppt Beat
+    else {
+        document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+        document.getElementById("play").setAttribute("class", "fas fa-play-circle");
+        clearInterval(theremix);
+    }
+}
+function mixbeat() {
+    play(sound[index]);
+    index++;
+    if (index > beat.length)
+        index = 0;
+    }
+    /*Stoppt Beat*/
 function stopBeat() {
         playingNow = false;
         if (btn.getAttribute("class"), "fas fa-stop-circle") {
@@ -90,5 +82,10 @@ function stopBeat() {
         document.querySelector("#mix").addEventListener("click", shuffle);
         document.querySelector("#trash").addEventListener("click", clearBeat);
 
+} 
+
+
+
 }
-); }
+
+);}
