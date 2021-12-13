@@ -10,12 +10,12 @@ new Audio("assets/C.mp3"), new Audio("assets/F.mp3"),
    new Audio("assets/laugh-2.mp3"), new Audio("assets/snare.mp3")];
 
 var beat[] = [sound[4], sound[5], sound[8]];
-var playingNow: boolean = false;
 var index: number = 0;
 var theremix: number;
 
- 
-/*Buttons and sound*/ 
+function play(sound) {
+ sound.play();
+    }
 
 document.getElementById("button0").addEventListener("click", function () { (sound [0]); });
 document.getElementById("button1").addEventListener("click", function () { (sound [1]); });
@@ -28,21 +28,36 @@ document.getElementById("button7").addEventListener("click", function () { (soun
 document.getElementById("button8").addEventListener("click", function () { (sound [8]); });
 
 
-    /*play the cantral function for the DrumPad*/
-
-function play(sound) {
-    // tslint:disable-next-line: typedef
-    var audio = new Audio(sound);
-    audio.play();
+    /*click on Play-Button to switch into Pause-Button*/
+function playBeat() {
+        if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
+            document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+            theremix = setInterval(mixbeat, 500);
+        }
+        else {
+            document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+            document.getElementById("play").setAttribute("class", "fas fa-play-circle");
+            clearInterval(theremix);
+        }
     }
+
+function mixbeat() {
+        play(sound[index]);
+        index++;
+        if (index > beat.length)
+            index = 0;
+        }
+
+    
+    
 
     /*Beat*/
 function shuffle(): void {
-        clearBeat();
-        for (let i: number = 0; i < 6; i++) {
-            beat.push(sound[Math.floor((Math.random() * 3))]);
-        }
-    }
+clearBeat();
+for (let i: number = 0; i < 6; i++) {
+beat.push(sound[Math.floor((Math.random() * 3))]);
+}
+ }
 
     /*delete the Beat*/
 function clearBeat(): void {
@@ -51,31 +66,11 @@ function clearBeat(): void {
 
 
 
-/*click on Play-Button to switch into Pause-Button*/
-    
-function playBeat() {
-    if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
-        document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
-        theremix = setInterval(mixbeat, 500);
-    }
-    else {
-        document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
-        document.getElementById("play").setAttribute("class", "fas fa-play-circle");
-        clearInterval(theremix);
-    }
-}
-function mixbeat() {
-    play(sound[index]);
-    index++;
-    if (index > beat.length)
-        index = 0;}
-
-
 document.querySelector("#play").addEventListener("click", function () { playBeat(); });
 document.querySelector("#mix").addEventListener("click", function () { shuffle(); });
 document.querySelector("#trash").addEventListener("click", function () { clearBeat(); });
 
-} 
+});
 
 
 }

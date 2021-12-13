@@ -9,10 +9,11 @@ var L8;
             new Audio("assets/kick.mp3"), new Audio("assets/laugh-1.mp3"),
             new Audio("assets/laugh-2.mp3"), new Audio("assets/snare.mp3")];
         var beat, _b = [sound[4], sound[5], sound[8]];
-        var playingNow = false;
         var index = 0;
         var theremix;
-        /*Buttons and sound*/
+        function play(sound) {
+            sound.play();
+        }
         document.getElementById("button0").addEventListener("click", function () { (sound[0]); });
         document.getElementById("button1").addEventListener("click", function () { (sound[1]); });
         document.getElementById("button2").addEventListener("click", function () { (sound[2]); });
@@ -22,23 +23,6 @@ var L8;
         document.getElementById("button6").addEventListener("click", function () { (sound[6]); });
         document.getElementById("button7").addEventListener("click", function () { (sound[7]); });
         document.getElementById("button8").addEventListener("click", function () { (sound[8]); });
-        /*play the cantral function for the DrumPad*/
-        function play(sound) {
-            // tslint:disable-next-line: typedef
-            var audio = new Audio(sound);
-            audio.play();
-        }
-        /*Beat*/
-        function shuffle() {
-            clearBeat();
-            for (var i = 0; i < 6; i++) {
-                beat.push(sound[Math.floor((Math.random() * 3))]);
-            }
-        }
-        /*delete the Beat*/
-        function clearBeat() {
-            beat = [];
-        }
         /*click on Play-Button to switch into Pause-Button*/
         function playBeat() {
             if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
@@ -56,6 +40,17 @@ var L8;
             index++;
             if (index > beat.length)
                 index = 0;
+        }
+        /*Beat*/
+        function shuffle() {
+            clearBeat();
+            for (var i = 0; i < 6; i++) {
+                beat.push(sound[Math.floor((Math.random() * 3))]);
+            }
+        }
+        /*delete the Beat*/
+        function clearBeat() {
+            beat = [];
         }
         document.querySelector("#play").addEventListener("click", function () { playBeat(); });
         document.querySelector("#mix").addEventListener("click", function () { shuffle(); });
