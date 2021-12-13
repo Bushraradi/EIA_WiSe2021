@@ -11,48 +11,8 @@ var L8;
         var beat, _a = [sound[4], sound[5], sound[8]];
         var index = 0;
         var theremix;
-        var play = true;
         function playSample(sound) {
             sound.play();
-        }
-        /*click on Play-Button to switch into Pause-Button*/
-        function playBeat() {
-            if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
-                document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
-                theremix = setInterval(mixbeat, 500);
-            }
-            else {
-                document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
-                clearInterval(theremix);
-            }
-        }
-        function mixbeat() {
-            playSample(sound[index]);
-            index++;
-            if (index == 3) {
-                index = 0;
-            }
-        }
-        /*Beat + beatdelet*/
-        function clearBeat() {
-            clearInterval(theremix);
-            if (document.getElementById("Play").getAttribute("class") == "fas fa-stop-circle") {
-                document.getElementById("Play").setAttribute("class", "fas fa-play-circle");
-            }
-        }
-        function shuffle() {
-            theremix = setInterval(mix, 250);
-            function mix() {
-                index = Math.floor(Math.random() * 5);
-                playSample(sound[index]);
-            }
-            if (play == true) {
-                document.getElementById("Play").setAttribute("class", "fas fa-stop-circle");
-            }
-            else {
-                document.getElementById("Play").setAttribute("class", "fas fa-play-circle");
-                clearInterval(theremix);
-            }
         }
         document.getElementById("button0").addEventListener("click", function () { (sound[0]); });
         document.getElementById("button1").addEventListener("click", function () { (sound[1]); });
@@ -63,6 +23,35 @@ var L8;
         document.getElementById("button6").addEventListener("click", function () { (sound[6]); });
         document.getElementById("button7").addEventListener("click", function () { (sound[7]); });
         document.getElementById("button8").addEventListener("click", function () { (sound[8]); });
+        /*click on Play-Button to switch into Pause-Button*/
+        function playBeat() {
+            if (document.getElementById("play").getAttribute("class") == ("fas fa-play-circle")) {
+                document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+                theremix = setInterval(mixbeat, 500);
+            }
+            else {
+                document.getElementById("play").setAttribute("class", "fas fa-stop-circle");
+                document.getElementById("play").setAttribute("class", "fas fa-play-circle");
+                clearInterval(theremix);
+            }
+        }
+        function mixbeat() {
+            play(sound[index]);
+            index++;
+            if (index > beat.length)
+                index = 0;
+        }
+        /*Beat*/
+        function shuffle() {
+            clearBeat();
+            for (var i = 0; i < 6; i++) {
+                beat.push(sound[Math.floor((Math.random() * 3))]);
+            }
+        }
+        /*delete the Beat*/
+        function clearBeat() {
+            beat = [];
+        }
         document.querySelector("#play").addEventListener("click", function () { playBeat(); });
         document.querySelector("#mix").addEventListener("click", function () { shuffle(); });
         document.querySelector("#trash").addEventListener("click", function () { clearBeat(); });
