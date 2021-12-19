@@ -13,7 +13,8 @@ declare var Artyom: any;
 
     input.addEventListener("keydown", function (event) : void {
         if (event.key === "Enter") {
-            createToDo();
+            let todotxt: string = input.value;
+            createToDo(todotxt);
             clearInput();
         }
     });
@@ -31,7 +32,7 @@ declare var Artyom: any;
     }
 
     //counter
-    function createToDo() {
+    function createToDo(todotxt:string) {
         todoCount++ ;
         openCount++ ;
 
@@ -53,7 +54,6 @@ declare var Artyom: any;
 
         checkbox.addEventListener("click", function (event: Event): void {
             let isChecked: boolean = checkbox.checked;
-
             if (isChecked === true) {
                 doneCount++;
                 openCount--;
@@ -67,7 +67,7 @@ declare var Artyom: any;
         });
 
 
-        label.innerHTML = input.value;
+        label.innerHTML = todotxt;
         label.className = "divLabel";
         trashButton.className = "fas fa-trash-alt";
         wrapper.appendChild(todoItem);
