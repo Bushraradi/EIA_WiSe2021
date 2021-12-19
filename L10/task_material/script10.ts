@@ -7,14 +7,13 @@ declare var Artyom: any;
     
     const input = document.getElementById("toDo");
     const wrapper = document.getElementById("todoWrapper");
-    let todoCount = 0;
-    let openCount = 0;
-    let doneCount = 0;
+    const todoCount = 0;
+    const openCount = 0;
+    const doneCount = 0;
 
     input.addEventListener("keydown", function (event) : void {
         if (event.key === "Enter") {
-            let Text : string = input.value;
-            createToDo(Text);
+            createToDo();
             clearInput();
         }
     });
@@ -33,9 +32,9 @@ declare var Artyom: any;
 
     //counter
     function createToDo() {
-        todoCount++;
-        openCount = ++ ;
-        doneCount = ++ ;
+        todoCount++ ;
+        openCount++ ;
+        doneCount++ ;
 
         updateCounter();
         updateopenCounter();
@@ -53,6 +52,14 @@ declare var Artyom: any;
         checkbox.className = "checkBox";
 
 
+        label.innerHTML = input.value;
+        label.className = "divLabel";
+        trashButton.className = "fas fa-trash-alt";
+        wrapper.appendChild(todoItem);
+        todoItem.appendChild(checkbox);
+        todoItem.appendChild(label);
+        todoItem.appendChild(trashButton);
+
         checkbox.addEventListener("click", function (event: Event): void {
             let isChecked: boolean = checkbox.checked;
 
@@ -67,14 +74,6 @@ declare var Artyom: any;
             updatedoneCounter();
 
         });
-
-        label.innerHTML = input.value;
-        label.className = "divLabel";
-        trashButton.className = "fas fa-trash-alt";
-        wrapper.appendChild(todoItem);
-        todoItem.appendChild(checkbox);
-        todoItem.appendChild(label);
-        todoItem.appendChild(trashButton);
 
         trashButton.addEventListener("click", function () {
             deleteItem(todoItem);

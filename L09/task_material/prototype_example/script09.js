@@ -5,6 +5,7 @@ var L09;
         var input = document.getElementById("toDo");
         var wrapper = document.getElementById("todoWrapper");
         var todoCount = 0;
+        
         input.addEventListener("keydown", function (event) {
             if (event.key === "Enter") {
                 createToDo();
