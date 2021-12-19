@@ -1,6 +1,6 @@
 namespace L10
 {
-
+declare var Artyom: any;
     window.addEventListener("load", function(): void {
     
     /*Deklaration der Variablen*/
@@ -13,20 +13,21 @@ namespace L10
 
     input.addEventListener("keydown", function (event) : void {
         if (event.key === "Enter") {
-            createToDo();
+            let Text : string = input.value;
+            createToDo(Text);
             clearInput();
         }
     });
-    function updateCounter() {
-        document.querySelector("#counterToDos").innerHTML = String(todoCount);
+    function updateCounter(): void {
+    document.querySelector("#counterToDos").innerHTML = String(todoCount);
 
-        function updateopenCounter() {
-            document.querySelector("#counteropen").innerHTML = String(openCount);
+    function updateopenCounter() : void {
+    document.querySelector("#counteropen").innerHTML = String(openCount);
 
-            function updatedoneCounter() {
-                document.querySelector("#counterdone").innerHTML = String(doneCount);
+    function updatedoneCounter(): void {
+    document.querySelector("#counterdone").innerHTML = String(doneCount);
     }
-    function clearInput() {
+    function clearInput(): void {
         input.value = "";
     }
 
@@ -67,35 +68,26 @@ namespace L10
 
         });
 
-
         label.innerHTML = input.value;
         label.className = "divLabel";
-
         trashButton.className = "fas fa-trash-alt";
-
-        trashButton.addEventListener("click", function (): void {
-            deleteItem(todoItem);
-
-
-            if (checkbox.checked === true) {
-                doneCount--;
-            }
-            else {
-                openCount--;
-            }
-            updateopenCounter();
-            updatedoneCounter();
-        });
-
-
         wrapper.appendChild(todoItem);
         todoItem.appendChild(checkbox);
         todoItem.appendChild(label);
         todoItem.appendChild(trashButton);
+
         trashButton.addEventListener("click", function () {
             deleteItem(todoItem);
-        });
-    }
+
+        if (checkbox.checked === true) {
+            doneCount--;
+        }
+        else {
+            openCount--;
+        }
+        updateopenCounter();
+        updatedoneCounter();
+    });
     function deleteItem(item) {
         wrapper.removeChild(item);
         todoCount--;
@@ -105,10 +97,9 @@ namespace L10
     const artyom: any = new Artyom();
 
     artyom.addCommands({
-        indexes: ["erstelle Aufgabe *"],
+        indexes: ["erstelle Aufagabe *"],
         smart: true,
         action: function (i: any, wildcard: string): void {
-            //toDo anlegen wenn "erstelle Aufgabe" gesagt wurde
             createToDo(wildcard);
         }
     });
@@ -138,3 +129,7 @@ namespace L10
     });
 
 });  
+
+
+    }
+
