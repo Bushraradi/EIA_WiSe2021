@@ -72,6 +72,14 @@ input {
      margin: auto;
      width: 532px;
  }
+ #mic {
+     opacity: 100%;
+ }
+ #mic:hover {
+     opacity: 80%;
+
+ }
+
  #Artyom {
     display: flex;
     flex-direction: column;

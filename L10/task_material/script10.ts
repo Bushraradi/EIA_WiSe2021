@@ -1,5 +1,5 @@
 var L10;
-(function (L10) {
+function (L10) {
 declare var Artyom: any;
     window.addEventListener("load", function(): void {
     
@@ -108,8 +108,7 @@ declare var Artyom: any;
     function startArtyom(): void {
         artyom.fatality();
 
-        setTimeout(
-            function (): void {
+        setTimeout (function (): void {
                 artyom.initialize({
                     lang: "de-DE",
                     continuous: true,
