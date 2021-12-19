@@ -51,15 +51,6 @@ declare var Artyom: any;
         checkbox.type = "checkbox";
         checkbox.className = "checkBox";
 
-
-        label.innerHTML = input.value;
-        label.className = "divLabel";
-        trashButton.className = "fas fa-trash-alt";
-        wrapper.appendChild(todoItem);
-        todoItem.appendChild(checkbox);
-        todoItem.appendChild(label);
-        todoItem.appendChild(trashButton);
-
         checkbox.addEventListener("click", function (event: Event): void {
             let isChecked: boolean = checkbox.checked;
 
@@ -75,6 +66,16 @@ declare var Artyom: any;
 
         });
 
+
+        label.innerHTML = input.value;
+        label.className = "divLabel";
+        trashButton.className = "fas fa-trash-alt";
+        wrapper.appendChild(todoItem);
+        todoItem.appendChild(checkbox);
+        todoItem.appendChild(label);
+        todoItem.appendChild(trashButton);
+
+
         trashButton.addEventListener("click", function () {
             deleteItem(todoItem);
 
@@ -87,7 +88,8 @@ declare var Artyom: any;
         updateopenCounter();
         updatedoneCounter();
     });
-    function deleteItem(item) {
+}
+    function deleteItem(item): void {
         wrapper.removeChild(item);
         todoCount--;
         updateCounter();
