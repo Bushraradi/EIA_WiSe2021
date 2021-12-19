@@ -1,5 +1,5 @@
-namespace L10
-{
+var L10;
+(function (L10) {
 declare var Artyom: any;
     window.addEventListener("load", function(): void {
     
@@ -21,7 +21,7 @@ declare var Artyom: any;
     document.querySelector("#counterToDos").innerHTML = String(todoCount);
 
     function updateopenCounter() : void {
-    document.querySelector("#counteropen").innerHTML = String(openCount);
+    document.getElementById("counteropen").innerHTML = String(openCount);
 
     function updatedoneCounter(): void {
     document.querySelector("#counterdone").innerHTML = String(doneCount);
@@ -34,11 +34,11 @@ declare var Artyom: any;
     function createToDo() {
         todoCount++ ;
         openCount++ ;
-        doneCount++ ;
 
         updateCounter();
         updateopenCounter();
         updatedoneCounter();
+    }
 
         //HTML Elemente
         const todoItem = document.createElement("div");
