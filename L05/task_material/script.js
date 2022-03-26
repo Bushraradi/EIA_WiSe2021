@@ -1,5 +1,5 @@
 /*Afrika*/
-var obj1 = 1235.5;
+var obj1: number = 1235.5;
 var obj1_2008 = 1028;
 /*Südamerika*/
 var obj2 = 1261.5;
